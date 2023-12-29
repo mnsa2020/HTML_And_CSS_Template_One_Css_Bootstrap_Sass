@@ -1,0 +1,302 @@
+/* ========== Variables ========== */
+@font-face {
+  font-family: "work sans";
+  src: url(../Fonts/WorkSans-VariableFont_wght.ttf);
+}
+/* ========== End Variables ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-title h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "work sans", sans-serif;
+  color: #ebeced;
+  letter-spacing: -5px;
+}
+.section-title p {
+  margin-top: -70px;
+  font-size: 1.3rem;
+  color: #797979;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+#contact, #about, #portfolio, #services, #features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+header {
+  background-color: #f6f6f6;
+}
+header .container nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container nav a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #10cab7;
+  font-weight: bold;
+  font-family: "work sans", sans-serif;
+}
+header .container nav a img {
+  width: 50px;
+  margin-right: 5px;
+}
+header .container nav .navbar {
+  display: flex;
+  align-items: center;
+}
+header .container nav .navbar svg {
+  display: none;
+  color: #10cab7;
+}
+@media (max-width: 767px) {
+  header .container nav .navbar svg {
+    display: block;
+  }
+}
+header .container nav .navbar ul {
+  list-style: none;
+}
+@media (max-width: 767px) {
+  header .container nav .navbar ul {
+    display: none;
+  }
+}
+header .container nav .navbar ul li {
+  display: inline-block;
+}
+header .container nav .navbar ul li a {
+  padding: 15px;
+  color: #10cab7;
+}
+header .container nav .navbar ul li a:hover, header .container nav .navbar ul li a.active {
+  color: #2c2755;
+}
+
+#landing {
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 50px);
+  position: relative;
+}
+#landing .container .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#landing .container .text h1 {
+  color: #10cab7;
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: "work sans", sans-serif;
+}
+#landing .container .text p {
+  font-size: 1.2rem;
+}
+
+#features {
+  background-color: #f6f6f6;
+}
+#features .container .content {
+  text-align: center;
+}
+#features .container .content .box {
+  padding: 20px;
+}
+#features .container .content .box svg {
+  color: #10cab7;
+}
+#services .container .content {
+  gap: 30px;
+}
+#services .container .content .box {
+  display: flex;
+}
+@media (max-width: 767px) {
+  #services .container .content .box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#services .container .content .box svg {
+  color: #10cab7;
+  flex-basis: 60px;
+}
+#services .container .content .box .text {
+  flex: 1;
+}
+#services .container .content .box .text he {
+  font-weight: normal;
+}
+#services .container .content .box .text p {
+  color: #797979;
+}
+
+#portfolio {
+  background-color: #f6f6f6;
+}
+#portfolio .container .content .card {
+  background: white;
+  box-shadow: 1px 1px 1px 1px #10cab7;
+  border-radius: 5px;
+}
+#portfolio .container .content .card img {
+  width: 100%;
+}
+#portfolio .container .content .card .info {
+  padding: 10px;
+}
+
+#about .container .content {
+  margin-top: 100px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  #about .container .content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#about .container .content .about-img {
+  position: relative;
+  flex: 1;
+}
+#about .container .content .about-img::before, #about .container .content .about-img:after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: -30px;
+}
+#about .container .content .about-img::before {
+  background-color: #10cab7;
+  width: 80px;
+  height: calc(100% + 40px);
+  left: -40px;
+}
+#about .container .content .about-img::after {
+  width: 60px;
+  height: 80%;
+  right: 30px;
+  border-bottom: 30px solid #2c2755;
+  border-left: 60px solid #2c2755;
+}
+#about .container .content .about-img img {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#about .container .content .text {
+  flex: 2;
+}
+#about .container .content .text p:first-child {
+  font-weight: bold;
+}
+#about .container .content .text hr {
+  width: 50%;
+}
+#about .container .content .text p:last-child {
+  color: gray;
+}
+
+#contact {
+  background-color: #f6f6f6;
+}
+#contact .container .content {
+  text-align: center;
+}
+#contact .container .content p {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #2c2755;
+}
+#contact .container .content > a {
+  font-family: "work sans", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #10cab7;
+}
+#contact .container .content > a:hover {
+  color: #2c2755;
+}
+#contact .container .content ul {
+  list-style: none;
+}
+#contact .container .content ul h5 {
+  display: inline;
+}
+#contact .container .content ul li {
+  display: inline;
+}
+#contact .container .content ul li a {
+  color: #2c2755;
+  padding: 0 5px;
+}
+#contact .container .content ul li a:hover {
+  color: #10cab7;
+}
+
+footer {
+  background-color: #2c2755;
+  padding: 10px;
+}
+footer .container {
+  text-align: center;
+}
+footer .container p {
+  color: white;
+}
+footer .container p span {
+  font-weight: bold;
+  font-family: "work sans", sans-serif;
+  color: #10cab7;
+}/*# sourceMappingURL=style-2.css.map */
